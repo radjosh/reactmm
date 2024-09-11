@@ -1,0 +1,10 @@
+body {
+    background-color: beige;
+    font-family: Geneva, Tahoma, sans-serif;
+    color: darkcyan;
+}
+
+.wrapper {
+    text-align: center;
+    padding: 80px;
+}
