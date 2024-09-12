@@ -10,7 +10,7 @@ function App() {
         async function handleSubmit(event) {
             event.preventDefault();
             const url = new URL(ENDPOINT);
-            url.searchParams.append('name', monster);
+            url.searchParams.append('name', monster.toLowerCase());
             const response = await fetch(url, {
                 method: 'GET',
             });
