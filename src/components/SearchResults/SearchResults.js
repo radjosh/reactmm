@@ -27,13 +27,15 @@ function SearchResults({ result }) {
       <h1>CR: {result.Cr}</h1>
       {result.Spells ? <h1>SPELLS: {result.Spells}</h1> : null}
       {result.Description ? <h1>DESCRIPTION: {result.Description}</h1> : null}
-      {result.Traits ? (
-        <div className="traits">
-          <h1>TRAIT: {result.Traits[0].name}</h1>
-          <h2>{result.Traits[0].text}</h2>
-          {result.Traits[0].attack ? <h2>{result.Traits[0].attack}</h2> : null}
+      {result.Traits?.map((trait) => (
+        <div className="traits" key={trait.name + result.name}>
+          <h1>TRAIT: {trait.name}</h1>
+          <h2>{trait.text}</h2>
+          {trait.attack ? (
+            <h2 style={{ color: "red" }}>{trait.attack}</h2>
+          ) : null}
         </div>
-      ) : null}
+      ))}
     </div>
   );
 }
