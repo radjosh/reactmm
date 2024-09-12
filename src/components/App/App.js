@@ -18,8 +18,9 @@ function App() {
       method: "GET",
     });
     const json = await response.json();
-    console.log(json);
+    // console.log(json);
     setResult(() => json);
+    setMonster(() => "");
     // console.log(result);
   }
 
@@ -28,6 +29,7 @@ function App() {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
+          autoFocus
           value={monster}
           onChange={(event) => {
             setMonster(() => event.target.value);
