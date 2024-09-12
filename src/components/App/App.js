@@ -8,11 +8,9 @@ function App() {
         const [monster, setMonster] = React.useState('');
 
         async function handleSubmit(event) {
-            // console.log(monster);
             event.preventDefault();
             const url = new URL(ENDPOINT);
             url.searchParams.append('name', monster);
-            // console.log(url);
             const response = await fetch(url, {
                 method: 'GET',
             });
@@ -21,17 +19,19 @@ function App() {
         }
 
         return (
-            <form onSubmit={handleSubmit}>
-                <input 
-                    type="text"
-                    value={monster}
-                    onChange={(event) => {
-                        setMonster(() => event.target.value);
-                        console.log(monster);
-                    }}
-                />
-                <input type="submit" value="submit" />
-            </form>
+            <div className="wrapper">
+                <form onSubmit={handleSubmit}>
+                    <input 
+                        type="text"
+                        value={monster}
+                        onChange={(event) => {
+                            setMonster(() => event.target.value);
+                            console.log(monster);
+                        }}
+                    />
+                    {/* <input type="submit" value="submit" /> */}
+                </form>
+            </div>
         )
     }
 
