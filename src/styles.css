@@ -1,11 +1,16 @@
 body {
-    background-color: beige;
-    font-family: Geneva, Tahoma, sans-serif;
-    color: darkcyan;
-    text-align: center;
+  background-color: beige;
+  font-family: Geneva, Tahoma, sans-serif;
+  color: darkcyan;
+  text-align: center;
 }
 
 .wrapper {
-    text-align: center;
-    padding: 80px;
+  text-align: center;
+  padding: 80px;
+}
+
+.results {
+  text-align: left;
+  padding-left: 400px;
 }
