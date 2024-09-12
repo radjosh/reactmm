@@ -36,6 +36,15 @@ function SearchResults({ result }) {
           ) : null}
         </div>
       ))}
+      {result.Actions?.map((action) => (
+        <div className="traits" key={action.name + result.name}>
+          <h1>ACTION: {action.name}</h1>
+          <h2>{action.text}</h2>
+          {action.attack ? (
+            <h2 style={{ color: "red" }}>{action.attack}</h2>
+          ) : null}
+        </div>
+      ))}
     </div>
   );
 }
