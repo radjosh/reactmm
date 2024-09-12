@@ -18,7 +18,7 @@ function App() {
       method: "GET",
     });
     const json = await response.json();
-    console.log(json);
+    // console.log(json);
     setResult(() => json);
     setMonster(() => "");
     // console.log(result);

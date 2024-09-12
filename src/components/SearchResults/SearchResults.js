@@ -45,6 +45,15 @@ function SearchResults({ result }) {
           ) : null}
         </div>
       ))}
+      {result.Legendary?.map((legendary) => (
+        <div className="traits" key={legendary.name + result.name}>
+          <h1>LEGENDARY: {legendary.name}</h1>
+          <h2>{legendary.text}</h2>
+          {legendary.attack ? (
+            <h2 style={{ color: "red" }}>{legendary.attack}</h2>
+          ) : null}
+        </div>
+      ))}
     </div>
   );
 }
