@@ -1,5 +1,6 @@
 import React from "react";
-import mindflayer from "../../images/mindflayer.webp";
+
+import images from "../../images";
 
 function SearchResults({ result }) {
   if (!result.Name) {
@@ -58,9 +59,7 @@ function SearchResults({ result }) {
         ))}
       </div>
       <div className="art">
-        <img src={mindflayer} />
-        {/* <img src={filePath} /> */}
-        {console.log(filePath)}
+        <img src={images.mindflayer} />
       </div>
     </>
   );
