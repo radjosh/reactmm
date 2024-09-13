@@ -10,6 +10,8 @@ function SearchResults({ result }) {
       </div>
     );
   }
+
+  const cleanerName = result?.Name.replace(/\s+/g, "") ?? "";
   return (
     <>
       <div className="results">
@@ -59,7 +61,7 @@ function SearchResults({ result }) {
         ))}
       </div>
       <div className="art">
-        <img src={images.mindflayer} />
+        <img src={images[cleanerName]} />
       </div>
     </>
   );
