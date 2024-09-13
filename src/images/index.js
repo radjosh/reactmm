@@ -4,6 +4,7 @@ const images = {
   frostgiant: require("./frostgiant.webp"),
   hillgiant: require("./hillgiant.webp"),
   mindflayer: require("./mindflayer.webp"),
+  peryton: require("./peryton.webp"),
   stormgiant: require("./stormgiant.webp"),
   succubus: require("./succubus.webp"),
 };

@@ -24,7 +24,7 @@ function App() {
   }
 
   return (
-    <div className="wrapper">
+    <div className="search">
       <form onSubmit={handleSubmit}>
         <input
           type="text"

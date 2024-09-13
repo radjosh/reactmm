@@ -10,20 +10,37 @@ input {
   padding-left: 19px;
 }
 
+.search {
+  padding: 80px;
+}
+
 .wrapper {
   text-align: center;
-  padding: 80px;
+  padding: 40px;
+  display: flex;
+  align-items: flex-start;
+  /* align-items: center; */
+  justify-content: space-around;
 }
 
 .results {
   text-align: left;
-  padding-left: 250px;
+  padding-left: 200px;
   padding-top: 39px;
   font-family: "Macondo Swash Caps", cursive;
   font-weight: 400;
   font-style: normal;
+  flex-grow: 2;
 }
 
+.art {
+  display: flex;
+  /* align-items: center; */
+  /* width: 1900px; */
+  width: 900pt;
+  flex-grow: 1;
+  padding-top: 79px;
+}
 .no-results {
   font-family: "UnifrakturMaguntia", cursive;
   font-weight: 400;
