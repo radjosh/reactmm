@@ -31,10 +31,11 @@ function SearchResults({ result }) {
           <h1>PASSIVE PERCEPTION: {result.Passive}</h1>
           <h1>LANGUAGES: {result.Languages}</h1>
           <h1>CR: {result.Cr}</h1>
+          {result.Senses ? <h1>SENSES: {result.Senses}</h1> : null}
+          {result.Vulnerable ? <h1>VULNERABLE: {result.Vulnerable}</h1> : null}
+          {result.Immune ? <h1>IMMUNE: {result.Immune}</h1> : null}
+          {result.Resist ? <h1>RESISTANT: {result.Resist}</h1> : null}
           {result.Spells ? <h1>SPELLS: {result.Spells}</h1> : null}
-          {result.Description ? (
-            <h1>DESCRIPTION: {result.Description}</h1>
-          ) : null}
           {result.Traits?.map((trait) => (
             <div className="traits" key={trait.name + result.name}>
               <h1>TRAIT: {trait.name}</h1>
@@ -62,6 +63,14 @@ function SearchResults({ result }) {
               ) : null}
             </div>
           ))}
+          {result.Description ? (
+            <div>
+              <br />
+              <p>
+                <h1>{result.Description}</h1>
+              </p>
+            </div>
+          ) : null}
         </div>
         <div className="art">
           <img src={images[cleanerName]} />
