@@ -27,6 +27,7 @@ clone/fork repo to /root/share. total kludge
 
 # set up parcel:
   npm install --save-dev parcel
+  
   npm install react react-dom
 
 # run dev server:
