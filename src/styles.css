@@ -29,18 +29,22 @@ input {
   font-family: "Macondo Swash Caps", cursive;
   font-weight: 400;
   font-style: normal;
-  flex-grow: 1;
+  flex-grow: 2;
 }
 
 .art {
   display: flex;
   width: 500%;
-  /* width: 2000px; */
   max-width: 30vw;
   height: auto;
-  flex-grow: 2;
+  flex-grow: 1;
   padding-top: 79px;
 }
+
+.art img {
+  height: 800px;
+}
+
 .no-results {
   font-family: "UnifrakturMaguntia", cursive;
   font-weight: 20;
