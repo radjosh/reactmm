@@ -21,6 +21,8 @@ note that this assumes that you're running ssh-agent to forward ssh keys (for gi
 it also assumes that you have a global ~/.gitconfig on the host machine
 
 # inside container
+(i.e. get onto container, either via docker exec or via vsc--beyond the scope of this readme!!)
+
 clone/fork repo to /root/share. total kludge
 
 # set up parcel:
