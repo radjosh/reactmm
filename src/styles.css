@@ -29,18 +29,22 @@ input {
   font-family: "Macondo Swash Caps", cursive;
   font-weight: 400;
   font-style: normal;
-  flex-grow: 1;
+  flex-grow: 2;
 }
 
 .art {
   display: flex;
   width: 500%;
-  /* width: 2000px; */
   max-width: 30vw;
   height: auto;
-  flex-grow: 2;
+  flex-grow: 1;
   padding-top: 79px;
 }
+
+.art img {
+  height: 800px;
+}
+
 .no-results {
   font-family: "UnifrakturMaguntia", cursive;
   font-weight: 20;
@@ -52,4 +56,17 @@ input {
 
 .traits h2 {
   padding-left: 39px;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.animated {
+  animation: slide 1750ms cubic-bezier(0.15, 0.75, 0.25, 1.05);
 }

@@ -72,7 +72,7 @@ function SearchResults({ result }) {
             </div>
           ) : null}
         </div>
-        <div className="art">
+        <div key={result.Name} className="art animated">
           <img src={images[cleanerName]} />
         </div>
       </div>
