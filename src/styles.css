@@ -57,3 +57,16 @@ input {
 .traits h2 {
   padding-left: 39px;
 }
+
+@keyframes slide {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.animated {
+  animation: slide 1750ms cubic-bezier(0.15, 0.75, 0.25, 1.05);
+}
