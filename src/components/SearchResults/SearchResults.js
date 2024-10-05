@@ -6,7 +6,7 @@ function SearchResults({ result }) {
   if (!result.Name) {
     return (
       <div className="no-results">
-        <h1>There's totally no monster with that name, friend. (w t f)</h1>
+        <h2>There's totally no monster with that name, friend. (w t f)</h2>
       </div>
     );
   }
@@ -17,57 +17,81 @@ function SearchResults({ result }) {
       <div className="wrapper">
         <div className="results">
           <h1>{result.Name.toUpperCase()}</h1>
-          <h1>SIZE: {result.Size}</h1>
-          <h1>ALIGNMENT: {result.Alignment}</h1>
-          <h1>AC: {result.Ac}</h1>
-          <h1>HP: {result.Hp}</h1>
-          <h1>STR: {result.Str}</h1>
-          <h1>DEX: {result.Dex}</h1>
-          <h1>CON: {result.Con}</h1>
-          <h1>INT: {result.Int}</h1>
-          <h1>WIS: {result.Wis}</h1>
-          <h1>CHA: {result.Cha}</h1>
-          {result.Skill ? <h1>SKILL: {result.Skill}</h1> : null}
-          <h1>PASSIVE PERCEPTION: {result.Passive}</h1>
-          <h1>LANGUAGES: {result.Languages}</h1>
-          <h1>CR: {result.Cr}</h1>
-          {result.Senses ? <h1>SENSES: {result.Senses}</h1> : null}
-          {result.Vulnerable ? <h1>VULNERABLE: {result.Vulnerable}</h1> : null}
-          {result.Immune ? <h1>IMMUNE: {result.Immune}</h1> : null}
-          {result.Resist ? <h1>RESISTANT: {result.Resist}</h1> : null}
-          {result.Spells ? <h1>SPELLS: {result.Spells}</h1> : null}
+          <h2>SIZE: {result.Size}</h2>
+          <h2>TYPE: {result.Type}</h2>
+          <h2>ALIGNMENT: {result.Alignment}</h2>
+          <h2>AC: {result.Ac}</h2>
+          <h2>HP: {result.Hp}</h2>
+          <h2>SPEED: {result.Speed}</h2>
+          <h2>STR: {result.Str}</h2>
+          <h2>DEX: {result.Dex}</h2>
+          <h2>CON: {result.Con}</h2>
+          <h2>INT: {result.Int}</h2>
+          <h2>WIS: {result.Wis}</h2>
+          <h2>CHA: {result.Cha}</h2>
+          {result.Save ? <h2>SAVE: {result.Save}</h2> : null}
+          {result.Skill ? <h2>SKILL: {result.Skill}</h2> : null}
+          <h2>PASSIVE PERCEPTION: {result.Passive}</h2>
+          <h2>LANGUAGES: {result.Languages}</h2>
+          <h2>CR: {result.Cr}</h2>
+          {result.Senses ? <h2>SENSES: {result.Senses}</h2> : null}
+          {result.Vulnerable ? <h2>VULNERABLE: {result.Vulnerable}</h2> : null}
+          {result.Immune ? <h2>IMMUNE: {result.Immune}</h2> : null}
+          {result.ConditionImmune ? (
+            <h2>CONDITION IMMUNITIES: {result.ConditionImmune}</h2>
+          ) : null}
+          {result.Resist ? <h2>RESISTANT: {result.Resist}</h2> : null}
           {result.Traits?.map((trait) => (
-            <div className="traits" key={trait.name + result.name}>
-              <h1>TRAIT: {trait.name}</h1>
-              <h2>{trait.text}</h2>
+            <div key={trait.name + result.name}>
+              <h2>TRAIT: {trait.name}</h2>
+              <h2 className="traits">{trait.text}</h2>
               {trait.attack ? (
-                <h2 style={{ color: "red" }}>{trait.attack}</h2>
+                <h2 className="traits" style={{ color: "red" }}>
+                  {trait.attack}
+                </h2>
               ) : null}
             </div>
           ))}
           {result.Actions?.map((action) => (
-            <div className="traits" key={action.name + result.name}>
-              <h1>ACTION: {action.name}</h1>
-              <h2>{action.text}</h2>
+            <div key={action.name + result.name}>
+              <h2>ACTION: {action.name}</h2>
+              <h2 className="traits"> {action.text}</h2>
               {action.attack ? (
-                <h2 style={{ color: "red" }}>{action.attack}</h2>
+                <h2 className="traits" style={{ color: "red" }}>
+                  {action.attack}
+                </h2>
+              ) : null}
+            </div>
+          ))}
+          {result.Reactions?.map((reaction) => (
+            <div key={reaction.name + result.name}>
+              <h2>REACTION: {reaction.name}</h2>
+              <h2 className="traits"> {reaction.text}</h2>
+              {reaction.attack ? (
+                <h2 className="traits" style={{ color: "red" }}>
+                  {reaction.attack}
+                </h2>
               ) : null}
             </div>
           ))}
           {result.Legendary?.map((legendary) => (
-            <div className="traits" key={legendary.name + result.name}>
-              <h1>LEGENDARY: {legendary.name}</h1>
-              <h2>{legendary.text}</h2>
+            <div key={legendary.name + result.name}>
+              <h2>LEGENDARY: {legendary.name}</h2>
+              <h2 className="traits">{legendary.text}</h2>
               {legendary.attack ? (
-                <h2 style={{ color: "red" }}>{legendary.attack}</h2>
+                <h2 className="traits" style={{ color: "red" }}>
+                  {legendary.attack}
+                </h2>
               ) : null}
             </div>
           ))}
+          {result.Spells ? <h2>SPELLS: {result.Spells}</h2> : null}
+          {result.Slots ? <h2>SLOTS: {result.Slots}</h2> : null}
           {result.Description ? (
             <div>
               <br />
               <p>
-                <h1>{result.Description}</h1>
+                <h2>{result.Description}</h2>
               </p>
             </div>
           ) : null}
