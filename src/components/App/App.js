@@ -38,3 +38,14 @@ function App() {
 }
 
 export default App;
+
+/* 
+ * run with
+ *    rm -rf .parcel_cache; npx parcel src/index.html -p 1236
+ * make sure to point to external ip address of backend it outside of container
+ *
+ * frontend and backend containers need to be on the same docker network
+ * docker network ls
+ * docker network connect <network name> gomm // or whatever the backend container is called
+ * docker network connect <network name> reactmm
+ */
