@@ -6,7 +6,7 @@ function SearchResults({ result }) {
   if (!result.Name) {
     return (
       <div className="no-results">
-        <h2>There's totally no monster with that name, friend. (w t f)</h2>
+        <h2>what?</h2>
       </div>
     );
   }
