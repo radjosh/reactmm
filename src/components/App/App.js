@@ -2,6 +2,7 @@ import React from "react";
 import SearchResults from "../SearchResults/SearchResults";
 
 function App() {
+  // const ENDPOINT = "http://localhost:3000/monster";
   const ENDPOINT = "http://localhost:8000/monster";
 
   const [monster, setMonster] = React.useState("");

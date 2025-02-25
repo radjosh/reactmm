@@ -1,6 +1,10 @@
 # What this is
 react frontend for mm app with go backend
 
+# run
+rm -rf .parcel_cache; npx parcel src/index.html -p 
+1236
+
 <hr /><hr />
 
 # example setup #####################################
